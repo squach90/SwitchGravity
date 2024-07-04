@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4hp3fo36p75p"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_dxo77"]
+[ext_resource type="FontFile" uid="uid://wvkpulue4rh4" path="res://Assets/Fonts/FFFFORWA.TTF" id="1_kvqlm"]
+[ext_resource type="Texture2D" uid="uid://bodx1pbd1bye0" path="res://Assets/Sprite/Transparent/tile_0002.png" id="1_xoxes"]
+[ext_resource type="Texture2D" uid="uid://b86cysnmj7o7i" path="res://Assets/Sprite/Transparent/tile_0042.png" id="4_0loor"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_dxo77")
+
+[node name="inGame" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="coinTexture" type="TextureRect" parent="inGame"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -302.0
+offset_top = 16.0
+offset_right = -185.0
+offset_bottom = 133.0
+grow_horizontal = 0
+texture = ExtResource("1_xoxes")
+
+[node name="coinLabel" type="Label" parent="inGame"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -169.0
+offset_top = 39.0
+offset_right = -19.0
+offset_bottom = 143.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_kvqlm")
+theme_override_font_sizes/font_size = 75
+text = "123"
+horizontal_alignment = 2
+
+[node name="lifeTexture" type="TextureRect" parent="inGame"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 141.0
+offset_bottom = 133.0
+texture = ExtResource("4_0loor")
