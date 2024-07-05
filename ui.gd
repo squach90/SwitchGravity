@@ -48,7 +48,6 @@ func _process(delta):
 			$animation.visible = false
 			$inGame.visible = false
 			$gameOverMenu.visible = true
-		#TODO: Void can kill Player
 
 
 func _on_play_button_pressed():
