@@ -3,6 +3,8 @@ extends CanvasLayer
 var countdown = 1.1
 var isGameOver = false
 
+#TODO: Link all button in Option Panel and link the "Option" button on the menu screen ot the panel
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
