@@ -2559,7 +2559,6 @@ theme_override_font_sizes/font_size = 40
 text = "Gravity Flip Remaining : 3"
 
 [node name="mainMenu" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -2983,6 +2982,7 @@ text = "My itch.Io Profile"
 flat = true
 
 [node name="easterEggPanel" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
