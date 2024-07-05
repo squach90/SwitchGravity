@@ -1,5 +1,6 @@
 extends Area2D
 
+@export var number = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +14,6 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		Global.coinsValue += 1
+		Global.coinsValue += number
 		#TODO: Add Sound
 		self.queue_free()
