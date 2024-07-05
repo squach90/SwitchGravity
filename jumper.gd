@@ -1,12 +1,6 @@
-extends Node
+extends Area2D
 
-var coinsValue = 0
-var lifeValue = 1
-var isOnPlay = false
-var playerPosition = null
-var firstPlayerPosition = Vector2(-1, 37)
-var newGame = false
-var attempts = 0
+@export var reverse = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,3 +10,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_body_entered(body):
+	if body.name == "Player":
+		$AnimatedSprite2D.play("jump")
+		if reverse:
+			body.velocity.y += 1700
+		else:
+			body.velocity.y += -1700

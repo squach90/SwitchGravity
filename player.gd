@@ -17,6 +17,10 @@ func _physics_process(delta):
 	
 	Global.playerPosition = self.global_position
 	
+	if Global.newGame:
+		self.global_position = Global.firstPlayerPosition
+		Global.newGame = false
+	
 	if Global.isOnPlay:
 	
 		if Input.is_action_pressed("kill"):

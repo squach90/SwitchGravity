@@ -10,6 +10,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	$gameOverMenu/attemptsLabel.text = "Attempts : " + str(Global.attempts)
+	
 	if not isGameOver:
 		$inGame/coinLabel.text = str(Global.coinsValue)
 		if Global.lifeValue <= 0:
@@ -22,6 +25,9 @@ func _process(delta):
 				$animation.visible = false
 				$inGame.visible = false
 				$gameOverMenu.visible = true
+		else :
+			$inGame/lifeTexture.visible = true
+			
 	else:
 		# If game is over, reduce the countdown and show game over menu after animation
 		countdown -= delta
@@ -38,6 +44,10 @@ func _on_play_button_pressed():
 	$mainMenu.visible = false
 	$inGame.visible = true
 	Global.isOnPlay = true
+	Global.lifeValue = 1
+	Global.coinsValue = 0
+	Global.newGame = true
+	Global.attempts += 1
 
 
 func _on_return_button_pressed():

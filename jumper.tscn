@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpaaon8uwna5k"]
+
+[ext_resource type="Texture2D" uid="uid://bq8yv31fyms03" path="res://Assets/Sprite/Transparent/tile_0163.png" id="1_sxkwk"]
+[ext_resource type="Script" path="res://jumper.gd" id="1_x6fm7"]
+[ext_resource type="Texture2D" uid="uid://bicoajqvdqo67" path="res://Assets/Sprite/Transparent/tile_0164.png" id="2_udjim"]
+[ext_resource type="Texture2D" uid="uid://bxm6h1asb5bpc" path="res://Assets/Sprite/Transparent/tile_0165.png" id="3_bcmu2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8l0s6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sxkwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_sxkwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_udjim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bcmu2")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 14.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq3cg"]
+size = Vector2(20, 14)
+
+[node name="Jumper" type="Area2D"]
+script = ExtResource("1_x6fm7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8l0s6")
+animation = &"jump"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_wq3cg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
