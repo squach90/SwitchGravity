@@ -2573,7 +2573,7 @@ destination = Vector2(9997, -4699)
 
 [node name="tpDoors4" parent="tpDoors" instance=ExtResource("10_wp0s7")]
 position = Vector2(1633.4, -350.6)
-destination = Vector2(1638, -40)
+destination = Vector2(9398, 800)
 
 [node name="tpDoors5" parent="tpDoors" instance=ExtResource("10_wp0s7")]
 position = Vector2(1680, -351)
@@ -2632,12 +2632,6 @@ rotation = 3.14159
 
 [node name="spike6" parent="spike" instance=ExtResource("11_l0aj4")]
 position = Vector2(2043, 112.8)
-
-[node name="spike7" parent="spike" instance=ExtResource("11_l0aj4")]
-position = Vector2(2126.2, 256.4)
-
-[node name="spike8" parent="spike" instance=ExtResource("11_l0aj4")]
-position = Vector2(2150.8, 256.4)
 
 [node name="spike9" parent="spike" instance=ExtResource("11_l0aj4")]
 position = Vector2(2126.2, 431.6)
@@ -2730,6 +2724,10 @@ position = Vector2(-8105, -2683)
 scale = Vector2(5, 5)
 destination = Vector2(9050, -1760)
 
+[node name="endFlag2" parent="." instance=ExtResource("14_qeyc0")]
+position = Vector2(9879, 901)
+scale = Vector2(5, 5)
+
 [node name="someText" type="Label" parent="."]
 offset_left = 9596.0
 offset_top = -4969.0
@@ -2753,11 +2751,11 @@ horizontal_alignment = 1
 
 [node name="someText3" type="Label" parent="someText"]
 offset_left = -700.0
-offset_top = 5184.0
+offset_top = 5989.0
 offset_right = 790.0
-offset_bottom = 5463.0
+offset_bottom = 6268.0
 theme_override_fonts/font = ExtResource("6_27ble")
 theme_override_font_sizes/font_size = 65
-text = "Good, you have do the egood choise.
+text = "Good, you have do the good choise.
 Now are you ready, for the end ?"
 horizontal_alignment = 1
