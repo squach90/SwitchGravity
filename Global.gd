@@ -7,6 +7,7 @@ var playerPosition = null
 var firstPlayerPosition = Vector2(-1, 37)
 var newGame = false
 var attempts = 0
+var codeKonamie = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

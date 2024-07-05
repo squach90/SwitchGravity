@@ -2494,7 +2494,6 @@ scale = Vector2(5, 5)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="UI" parent="." instance=ExtResource("4_bcljw")]
-visible = false
 
 [node name="coins" parent="." instance=ExtResource("5_2krb0")]
 position = Vector2(-107, 48)
@@ -2502,13 +2501,10 @@ scale = Vector2(5, 5)
 
 [node name="coins2" parent="coins" instance=ExtResource("5_2krb0")]
 position = Vector2(-1580, -619.2)
-scale = Vector2(1, 1)
 number = 3
 
 [node name="coins3" parent="coins" instance=ExtResource("5_2krb0")]
-position = Vector2(-1812.6, -273.4)
-scale = Vector2(1, 1)
-number = 2
+position = Vector2(-1811.8, -273.4)
 
 [node name="spaceTutoLabel" type="Label" parent="."]
 offset_left = 39.0
@@ -2559,7 +2555,6 @@ destination = Vector2(-6173, -1328)
 
 [node name="tpDoors2" parent="tpDoors" instance=ExtResource("10_wp0s7")]
 position = Vector2(-1531.2, -320)
-scale = Vector2(1, 1)
 destination = Vector2(1638, -40)
 
 [node name="doorsTutoLabel" type="Label" parent="."]
@@ -2600,7 +2595,6 @@ scale = Vector2(5, 5)
 
 [node name="spike2" parent="spike" instance=ExtResource("11_l0aj4")]
 position = Vector2(213.8, -30.6)
-scale = Vector2(1, 1)
 
 [node name="Jumper" parent="." instance=ExtResource("12_3b115")]
 position = Vector2(-201, 48)
@@ -2609,11 +2603,9 @@ scale = Vector2(5, 5)
 [node name="Jumper2" parent="Jumper" instance=ExtResource("12_3b115")]
 position = Vector2(18.8, -81.8)
 rotation = -3.14159
-scale = Vector2(1, 1)
 reverse = true
 
 [node name="Jumper3" parent="Jumper" instance=ExtResource("12_3b115")]
 position = Vector2(301.2, -130.4)
 rotation = -3.14159
-scale = Vector2(1, 1)
 reverse = true

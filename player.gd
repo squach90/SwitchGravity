@@ -9,11 +9,31 @@ var facing_right = true
 
 var gravity = 3000
 var reversed_speed = 6000
+var konami_code = [
+	KEY_UP, KEY_DOWN, KEY_UP, KEY_DOWN,
+	KEY_LEFT, KEY_RIGHT, KEY_LEFT, KEY_RIGHT,
+]
+var konami_index = 0
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == konami_code[konami_index]:
+			konami_index += 1
+			if konami_index == len(konami_code):
+				konami_index = 0
+				# Code Konami complété, afficher un message dans la console
+				print("Code Konami entré !")
+				Global.codeKonamie = true
+		else:
+			konami_index = 0  
+
 
 func _ready():
 	AnimationSprite = $AnimatedSprite2D
+	set_process_input(true)
 
 func _physics_process(delta):
+	
 	
 	Global.playerPosition = self.global_position
 	
@@ -51,9 +71,12 @@ func _physics_process(delta):
 		
 		if gravity_reversed:
 			velocity.y -= reversed_speed * get_process_delta_time()
+			
 
 		move_and_slide()
 
 func flip():
 	facing_right = not facing_right
 	$AnimatedSprite2D.scale.y *= -1 
+
+

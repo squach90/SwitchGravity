@@ -2,8 +2,16 @@ extends CanvasLayer
 
 var countdown = 1.1
 var isGameOver = false
+var portfolioLink = "https://portfolio-squach.vercel.app/"
+var gameJamLink = "https://itch.io/jam/indie-park-game-jam"
+var sourceCodeLink = "https://github.com/squach90/SwitchGravity"
+var itchIoLink = "https://squach90.itch.io/"
 
-#TODO: Link all button in Option Panel and link the "Option" button on the menu screen ot the panel
+var konami_code = [
+	"ui_up", KEY_UP, KEY_DOWN, KEY_DOWN,
+	"ui_left", KEY_RIGHT, KEY_LEFT, KEY_RIGHT,
+]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +22,8 @@ func _ready():
 func _process(delta):
 	
 	$gameOverMenu/attemptsLabel.text = "Attempts : " + str(Global.attempts)
+	if Global.codeKonamie:
+		$easterEggPanel.visible = true
 	
 	if not isGameOver:
 		$inGame/coinLabel.text = str(Global.coinsValue)
@@ -59,3 +69,47 @@ func _on_return_button_pressed():
 	Global.lifeValue = 1  # Réinitialiser la vie du joueur
 	countdown = 1.1  # Réinitialiser le compte à rebours
 	isGameOver = false
+
+
+func _on_reset_data_button_pressed():
+	Global.lifeValue = 1
+	Global.isOnPlay = false
+	Global.attempts = 0
+	Global.coinsValue = 0
+
+
+func _on_game_jam_link_pressed():
+	OS.shell_open(gameJamLink)
+	
+	
+
+func _on_source_code_pressed():
+	OS.shell_open(sourceCodeLink)
+
+
+
+func _on_portfolio_button_pressed():
+	OS.shell_open(portfolioLink)
+
+
+func _on_itch_button_pressed():
+	OS.shell_open(itchIoLink)
+
+
+func _on_close_button_pressed():
+	$optionPanel.visible = false
+	$mainMenu.visible = true
+
+
+func _on_option_button_pressed():
+	$optionPanel.visible = true
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()
+
+
+
+func _on_close_easter_egg_button_pressed():
+	Global.codeKonamie = false
+	$easterEggPanel.visible = false
