@@ -2544,7 +2544,22 @@ offset_right = 141.0
 offset_bottom = 133.0
 texture = ExtResource("4_0loor")
 
+[node name="gravityFlipRemaining" type="Label" parent="inGame"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -87.0
+offset_right = 677.0
+offset_bottom = -32.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_kvqlm")
+theme_override_font_sizes/font_size = 40
+text = "Gravity Flip Remaining : 3"
+
 [node name="mainMenu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -2968,7 +2983,6 @@ text = "My itch.Io Profile"
 flat = true
 
 [node name="easterEggPanel" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -3026,7 +3040,7 @@ theme_override_fonts/font = ExtResource("1_kvqlm")
 theme_override_font_sizes/font_size = 30
 text = "Bravo, you found the easter egg, 
 to prove that you found it you can 
-comment \"KonamieCode\" on 
+comment \"KonamiCode\" on 
 my Itch.Io page"
 
 [node name="closeEasterEggButton" type="Button" parent="easterEggPanel"]

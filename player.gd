@@ -6,6 +6,8 @@ var AnimationSprite
 var jump_force = -400
 var gravity_reversed = false
 var facing_right = true 
+var gravity_flip_count = 0
+const MAX_GRAVITY_FLIPS = 2
 
 var gravity = 3000
 var reversed_speed = 6000
@@ -34,7 +36,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	
+	Global.gravity_flip_count = self.gravity_flip_count
 	Global.playerPosition = self.global_position
 	
 	if Global.newGame:
@@ -49,6 +51,9 @@ func _physics_process(delta):
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
+		else:
+			# Reset gravity flip count when touching the floor
+			gravity_flip_count = 0
 			
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
@@ -65,9 +70,10 @@ func _physics_process(delta):
 		else:
 			AnimationSprite.stop()
 			
-		if Input.is_action_just_pressed("space"):
+		if Input.is_action_just_pressed("space") and gravity_flip_count < MAX_GRAVITY_FLIPS:
 			gravity_reversed = not gravity_reversed
 			flip()
+			gravity_flip_count += 1
 		
 		if gravity_reversed:
 			velocity.y -= reversed_speed * get_process_delta_time()

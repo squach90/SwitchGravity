@@ -21,6 +21,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	$inGame/gravityFlipRemaining.text = "Gravity Flip Remaining : " + str(Global.flips_remaining)
 	$gameOverMenu/attemptsLabel.text = "Attempts : " + str(Global.attempts)
 	if Global.codeKonamie:
 		$easterEggPanel.visible = true
@@ -47,7 +48,7 @@ func _process(delta):
 			$animation.visible = false
 			$inGame.visible = false
 			$gameOverMenu.visible = true
-		#TODO: Void can kill Player and Maybe Monsters
+		#TODO: Void can kill Player
 
 
 func _on_play_button_pressed():
