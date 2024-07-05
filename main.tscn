@@ -2738,6 +2738,7 @@ theme_override_font_sizes/font_size = 50
 text = "Only death can save you"
 
 [node name="someText2" type="Label" parent="someText"]
+layout_mode = 0
 offset_left = -285.0
 offset_top = 3093.0
 offset_right = 661.0
@@ -2750,6 +2751,7 @@ Death"
 horizontal_alignment = 1
 
 [node name="someText3" type="Label" parent="someText"]
+layout_mode = 0
 offset_left = -700.0
 offset_top = 5989.0
 offset_right = 790.0
