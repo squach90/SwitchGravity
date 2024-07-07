@@ -1,0 +1,12 @@
+join People 1
+People (Default): Oh, un survivant
+join Player 3
+Player: Euh, Bonjour pourquoi il n'y a pas de couleur ici ?
+People: À ça c'est très simple (et triste) un jour un monstre est arrivé et à aspiré toute la couleur de ce monde à la paille. Et comme si ce n'était pas déjà suffisant il à casser notre orbe de gravité.
+Player: Avec un paille !? Bon quoi qu'il en soit j'ai découvert que si j'appuiait sur [Espace] Je pouvais changer ma gravité.
+People: Comment ça ?!
+Player: Je ne sais pas mais je trouve ça super pratique.
+People: Bon, essayer de trouver une porte (c'est là où se trouve le drapeau sacré)
+Player: D'accord. Je vais essayer d'y aller.
+set {End} = true
+[end_timeline]
