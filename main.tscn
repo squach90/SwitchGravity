@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://cj3m10nig8aa1"]
+[gd_scene load_steps=25 format=3 uid="uid://cj3m10nig8aa1"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_adj6k"]
 [ext_resource type="Texture2D" uid="uid://b6ljpxhvb3ftr" path="res://Assets/TileSet/monochrome_tilemap_packed.png" id="1_hetfg"]
 [ext_resource type="Texture2D" uid="uid://dmh7jbpmpdig6" path="res://Assets/TileSet/monochrome_tilemap_transparent_packed.png" id="2_lchvo"]
 [ext_resource type="PackedScene" uid="uid://defo3wmuqvpg2" path="res://player.tscn" id="3_4di5o"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bpaaon8uwna5k" path="res://jumper.tscn" id="12_3b115"]
 [ext_resource type="PackedScene" uid="uid://c226mywntdeg3" path="res://death_zone.tscn" id="13_0yyhy"]
 [ext_resource type="PackedScene" uid="uid://dsirv7q5p5jwl" path="res://end_flag.tscn" id="14_qeyc0"]
+[ext_resource type="PackedScene" uid="uid://b65vaiirijhqi" path="res://finish_flag.tscn" id="18_7orau"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfiqo"]
 texture = ExtResource("1_hetfg")
@@ -4983,6 +4985,7 @@ sources/0 = SubResource("TileSetAtlasSource_plstf")
 sources/1 = SubResource("TileSetAtlasSource_78ugb")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_adj6k")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(5, 5)
@@ -5311,3 +5314,16 @@ theme_override_fonts/font = ExtResource("6_27ble")
 theme_override_font_sizes/font_size = 25
 text = "squach90
 "
+
+[node name="finalText3" type="Label" parent="."]
+offset_left = 16633.0
+offset_top = 6895.0
+offset_right = 17392.0
+offset_bottom = 6931.0
+theme_override_fonts/font = ExtResource("6_27ble")
+theme_override_font_sizes/font_size = 25
+text = "If you go in this flag you can unlock somethings"
+
+[node name="finishFlag" parent="." instance=ExtResource("18_7orau")]
+position = Vector2(17302, 7220)
+scale = Vector2(5, 5)

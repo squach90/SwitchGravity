@@ -27,7 +27,9 @@ func _process(delta):
 		$easterEggPanel.visible = true
 	
 	if Global.finish:
+		Global.lifeValue = 0
 		$mainMenu/TileMap2.visible = true
+		Global.finish = false
 	
 	if not isGameOver:
 		$inGame/coinLabel.text = str(Global.coinsValue)
