@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cj3m10nig8aa1"]
+[gd_scene load_steps=26 format=3 uid="uid://cj3m10nig8aa1"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_adj6k"]
 [ext_resource type="Texture2D" uid="uid://b6ljpxhvb3ftr" path="res://Assets/TileSet/monochrome_tilemap_packed.png" id="1_hetfg"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c226mywntdeg3" path="res://death_zone.tscn" id="13_0yyhy"]
 [ext_resource type="PackedScene" uid="uid://dsirv7q5p5jwl" path="res://end_flag.tscn" id="14_qeyc0"]
 [ext_resource type="PackedScene" uid="uid://b65vaiirijhqi" path="res://finish_flag.tscn" id="18_7orau"]
+[ext_resource type="PackedScene" uid="uid://b1a3wndktk2hr" path="res://people.tscn" id="19_sousr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfiqo"]
 texture = ExtResource("1_hetfg")
@@ -5326,4 +5327,8 @@ text = "If you go in this flag you can unlock somethings"
 
 [node name="finishFlag" parent="." instance=ExtResource("18_7orau")]
 position = Vector2(17302, 7220)
+scale = Vector2(5, 5)
+
+[node name="People" parent="." instance=ExtResource("19_sousr")]
+position = Vector2(-119, -1000)
 scale = Vector2(5, 5)
