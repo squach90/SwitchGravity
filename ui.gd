@@ -26,6 +26,9 @@ func _process(delta):
 	if Global.codeKonamie:
 		$easterEggPanel.visible = true
 	
+	if Global.finish:
+		$mainMenu/TileMap2.visible = true
+	
 	if not isGameOver:
 		$inGame/coinLabel.text = str(Global.coinsValue)
 		if Global.lifeValue <= 0:

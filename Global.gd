@@ -12,6 +12,8 @@ var maxGravityFlip = 2
 var gravity_flip_count = 0
 var flips_remaining = maxGravityFlip - gravity_flip_count
 
+var finish = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
